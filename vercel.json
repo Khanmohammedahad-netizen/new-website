@@ -1,5 +1,11 @@
 {
   "framework": null,
   "buildCommand": "pnpm --filter @workspace/mak-software build",
-  "outputDirectory": "artifacts/mak-software/dist"
+  "outputDirectory": "artifacts/mak-software/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
