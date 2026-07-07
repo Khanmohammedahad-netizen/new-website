@@ -1,5 +1,5 @@
 {
   "framework": null,
-  "buildCommand": "pnpm --filter @workspace/mak-software build",
-  "outputDirectory": "artifacts/mak-software/dist"
+  "buildCommand": "pnpm --filter @workspace/mak-software build && mkdir -p dist && cp -r artifacts/mak-software/dist/* dist/",
+  "outputDirectory": "dist"
 }
