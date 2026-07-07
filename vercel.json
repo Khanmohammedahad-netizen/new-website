@@ -1,4 +1,5 @@
 {
+  "framework": null,
   "buildCommand": "pnpm --filter @workspace/mak-software build",
   "outputDirectory": "artifacts/mak-software/dist"
 }
