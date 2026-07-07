@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "MAK Software Solutions"
+version = "1.0.0"
+id = "artifacts/mak-software"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20200
+
+[services.development]
+run = "pnpm --filter @workspace/mak-software run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mak-software", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mak-software/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20200"
+BASE_PATH = "/"
