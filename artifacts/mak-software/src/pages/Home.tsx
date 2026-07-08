@@ -96,12 +96,10 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <h1 ref={heroHeadlineRef} className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight max-w-5xl leading-[1.1] mb-8 flex flex-wrap justify-center gap-[0.2em]">
-              <span className="word inline-block">We</span>
-              <span className="word inline-block">engineer</span>
+            <h1 ref={heroHeadlineRef} className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight max-w-5xl leading-[1.1] mb-8">
+              <span className="word inline-block">We engineer</span>
               <span className="hidden md:block w-full h-0"></span>
-              <span className="word inline-block italic font-light text-zinc-300">digital</span>
-              <span className="word inline-block italic font-light text-zinc-300">businesses.</span>
+              <span className="word inline-block italic font-light text-zinc-300">digital businesses.</span>
             </h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -464,7 +462,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. FOUNDER MESSAGE */}
+      {/* 11. CALL TO ACTION */}
+      <section className="py-32 bg-[#F5F0E8] text-[#111411]">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-serif text-4xl md:text-6xl mb-6">Ready to build something exceptional?</h2>
+              <p className="font-sans text-lg text-[#111411]/80 mb-12 max-w-2xl mx-auto font-light">
+                Explore our <Link href="/work" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">portfolio of successful projects</Link> or <Link href="/contact" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">start your project today</Link>.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Link
+                  href="/work"
+                  className="bg-[#2D5A3D] text-white hover:bg-[#2D5A3D]/90 px-8 py-4 rounded-sm font-mono text-sm tracking-wider transition-all"
+                >
+                  VIEW PORTFOLIO
+                </Link>
+                <Link
+                  href="/contact"
+                  className="border border-[#111411] hover:bg-[#111411] hover:text-white px-8 py-4 rounded-sm font-mono text-sm tracking-wider transition-all"
+                >
+                  GET IN TOUCH
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 12. FOUNDER MESSAGE */}
       <section className="py-32 bg-[#0A0A0A] text-white">
         <div className="container mx-auto px-6">
           <AnimatedSection>
