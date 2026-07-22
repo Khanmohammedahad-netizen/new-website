@@ -1,14 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Map, Users, Compass, Zap } from 'lucide-react';
 
 export default function ThirdPlace() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
-      <Helmet>
-        <title>Third Place | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="Third Place Case Study — Vibe-Based Discovery App | MAK Software Solutions"
+        description="How MAK Software Solutions built Third Place, a vibe-based mobile discovery platform for coffee shops and workspaces with Mapbox maps, real-time occupancy, and AI vibe matching."
+        path="/work/third-place"
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+          { name: 'Third Place', path: '/work/third-place' },
+        ]}
+      />
 
       {/* HERO */}
       <section className="pt-40 pb-20 px-6 bg-[#D9CDB8]">
@@ -20,9 +28,17 @@ export default function ThirdPlace() {
               <span className="font-mono text-xs tracking-widest uppercase">Mobile Application</span>
             </div>
             <h1 className="font-serif text-6xl md:text-8xl mb-8">Third Place</h1>
-            <p className="font-sans text-xl md:text-2xl max-w-2xl font-light opacity-80">
+            <p className="font-sans text-xl md:text-2xl max-w-2xl font-light opacity-80 mb-8">
               A vibe-based discovery platform connecting remote workers with the perfect environments.
             </p>
+            <a
+              href="https://the3rdplace.com"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block border border-[#111411] hover:bg-[#111411] hover:text-[#F5F0E8] px-6 py-3 rounded-sm font-mono text-xs tracking-widest uppercase transition-colors"
+            >
+              Visit Live Site →
+            </a>
           </AnimatedSection>
         </div>
       </section>

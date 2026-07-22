@@ -1,14 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Building2, Globe2, BarChart3, ShieldCheck } from 'lucide-react';
 
 export default function SevenStarErp() {
   return (
     <div className="min-h-screen bg-[#F8F9FA] text-[#0F172A]">
-      <Helmet>
-        <title>7STAR ERP | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="7STAR ERP Case Study — Enterprise Resource Planning | MAK Software Solutions"
+        description="How MAK Software Solutions built 7STAR ERP, a centralized enterprise resource planning system managing global operations, inventory, finance, and workforce for an international business."
+        path="/work/7star-erp"
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+          { name: '7STAR ERP', path: '/work/7star-erp' },
+        ]}
+      />
 
       {/* HERO */}
       <section className="pt-40 pb-32 px-6 bg-[#0F172A] text-white">

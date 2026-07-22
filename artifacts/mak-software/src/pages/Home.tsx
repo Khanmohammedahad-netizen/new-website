@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo, { SITE_URL } from '@/components/Seo';
 import { Link } from 'wouter';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { gsap } from 'gsap';
@@ -11,6 +11,72 @@ import { SiReact, SiNextdotjs, SiTypescript, SiNodedotjs, SiPostgresql, SiSupaba
 import { Cloud } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const FAQS = [
+  {
+    q: 'What kind of software does MAK Software Solutions build?',
+    a: 'We build AI-powered platforms, enterprise software, ERP and CRM systems, SaaS products, mobile applications, and business automation systems. Every project is custom-architected around the client’s operations rather than adapted from a template.',
+  },
+  {
+    q: 'Which countries does MAK Software Solutions serve?',
+    a: 'We serve clients across India, the UAE, Saudi Arabia, the United Kingdom, the United States, Singapore, Japan, Australia, and Europe, with engineering operations based in Hyderabad, India.',
+  },
+  {
+    q: 'How long does a typical software project take?',
+    a: 'Scope drives timelines, but most MVPs ship in 4–8 weeks and enterprise platforms in 8–16 weeks. We work in iterative sprints, so you see working software from the first weeks, not just at the end.',
+  },
+  {
+    q: 'Do you work with AI technologies like OpenAI, Claude, and Azure AI?',
+    a: 'Yes. AI integration is one of our core specialties — we build autonomous agent systems, LLM-powered workflows, and intelligent automation using OpenAI, Anthropic Claude, Google Gemini, Groq, and Azure AI services.',
+  },
+  {
+    q: 'How do I start a project with MAK Software Solutions?',
+    a: 'Reach out through the contact form or WhatsApp. We start with a discovery call to map the problem space, then deliver a technical proposal with architecture, timeline, and pricing before any commitment.',
+  },
+];
+
+const HOME_JSON_LD = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'MAK Software Solutions',
+    url: SITE_URL,
+    description:
+      'AI-first software development company building enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile applications for clients across India, UAE, UK, USA, and beyond.',
+    areaServed: ['India', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'United States', 'Singapore', 'Japan', 'Australia'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Hyderabad',
+      addressRegion: 'Telangana',
+      addressCountry: 'IN',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'sales',
+      telephone: '+91-7702448705',
+      availableLanguage: ['English', 'Hindi'],
+    },
+    knowsAbout: [
+      'AI software development',
+      'Enterprise software',
+      'ERP systems',
+      'CRM systems',
+      'SaaS platforms',
+      'Mobile app development',
+      'Business automation',
+      'AI agents',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -81,10 +147,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
-      <Helmet>
-        <title>MAK Software Solutions | Engineering Digital Businesses</title>
-        <meta name="description" content="Elite global engineering firm building software that scales. We architect digital businesses, enterprise systems, and intelligent platforms." />
-      </Helmet>
+      <Seo
+        title="MAK Software Solutions | AI & Custom Software Development Company"
+        description="AI-first software development company in Hyderabad, India. We build enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile apps for clients across India, UAE, UK, USA, and beyond."
+        path="/"
+        jsonLd={HOME_JSON_LD}
+      />
 
       {/* 1. HERO */}
       <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-zinc-950 text-white">
@@ -462,7 +530,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. CALL TO ACTION */}
+      {/* 11. FAQ */}
+      <section className="py-32 bg-[#0A0A0A] text-white border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <h2 className="font-serif text-4xl md:text-5xl mb-16 text-center">Frequently asked questions.</h2>
+          </AnimatedSection>
+          <div className="max-w-3xl mx-auto divide-y divide-white/10">
+            {FAQS.map((faq, i) => (
+              <AnimatedSection key={i} delay={i * 0.05}>
+                <details className="group py-6">
+                  <summary className="flex items-center justify-between cursor-pointer list-none font-sans text-lg md:text-xl font-light">
+                    {faq.q}
+                    <ChevronDown className="w-5 h-5 shrink-0 ml-4 text-zinc-500 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <p className="font-sans font-light text-zinc-400 leading-relaxed mt-4 max-w-2xl">
+                    {faq.a}
+                  </p>
+                </details>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 12. CALL TO ACTION */}
       <section className="py-32 bg-[#F5F0E8] text-[#111411]">
         <div className="container mx-auto px-6">
           <AnimatedSection>
@@ -490,7 +582,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 12. FOUNDER MESSAGE */}
+      {/* 13. FOUNDER MESSAGE */}
       <section className="py-32 bg-[#0A0A0A] text-white">
         <div className="container mx-auto px-6">
           <AnimatedSection>

@@ -1,14 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Terminal, Database, Network, Cpu } from 'lucide-react';
 
 export default function MakOs() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#2D5A3D] selection:text-white">
-      <Helmet>
-        <title>MAK OS v1 | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="MAK OS Case Study — Autonomous AI Agent Platform | MAK Software Solutions"
+        description="How MAK Software Solutions built MAK OS, an autonomous multi-agent B2B acquisition pipeline that automates lead discovery, enrichment, and outreach with LLM-powered agents."
+        path="/work/mak-os"
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+          { name: 'MAK OS', path: '/work/mak-os' },
+        ]}
+      />
 
       {/* HERO */}
       <section className="pt-40 pb-32 px-6 relative overflow-hidden border-b border-white/10">

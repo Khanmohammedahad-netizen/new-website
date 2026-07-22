@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import { Link } from 'wouter';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from '@/components/ui/AnimatedSection';
@@ -60,9 +60,15 @@ const CASE_STUDIES = [
 export default function Work() {
   return (
     <div className="pt-32 pb-32 min-h-screen bg-background">
-      <Helmet>
-        <title>Work | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="Case Studies & Portfolio | MAK Software Solutions"
+        description="Explore MAK Software Solutions case studies: AI agent platforms, enterprise ERP systems, mobile apps, and SaaS infrastructure built for clients across India, UAE, UK, and USA."
+        path="/work"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+        ]}
+      />
 
       <div className="container mx-auto px-6">
         <AnimatedSection>

@@ -1,14 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Brain, Cpu, Database, Zap } from 'lucide-react';
 
 export default function LeadmineAi() {
   return (
     <div className="min-h-screen bg-[#050B14] text-white">
-      <Helmet>
-        <title>LeadMine AI | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="LeadMine AI Case Study — AI Lead Intelligence Platform | MAK Software Solutions"
+        description="How MAK Software Solutions built LeadMine AI, an AI-driven lead intelligence platform routing across Groq, Gemini, and Ollama models for high-volume B2B lead scoring and enrichment."
+        path="/work/leadmine-ai"
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+          { name: 'LeadMine AI', path: '/work/leadmine-ai' },
+        ]}
+      />
 
       {/* HERO */}
       <section className="pt-40 pb-32 px-6 relative overflow-hidden">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -48,9 +48,23 @@ Message: ${values.message}`;
 
   return (
     <div className="min-h-screen bg-[#F5F0E8] pt-32 pb-24">
-      <Helmet>
-        <title>Contact | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="Contact Us — Start a Project | MAK Software Solutions"
+        description="Start a software project with MAK Software Solutions. Get a technical proposal with architecture, timeline, and pricing. Reach us via WhatsApp or the contact form — we respond within 24 hours."
+        path="/contact"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' },
+        ]}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact MAK Software Solutions',
+            url: 'https://www.maksoftwaresolutions.com/contact',
+          },
+        ]}
+      />
 
       <div className="container mx-auto px-6">
         <AnimatedSection>

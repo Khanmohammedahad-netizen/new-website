@@ -1,14 +1,22 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Seo from '@/components/Seo';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Layers, FileCode2, Shield, Repeat } from 'lucide-react';
 
 export default function SaasEcosystem() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
-      <Helmet>
-        <title>SaaS Ecosystem | MAK Software Solutions</title>
-      </Helmet>
+      <Seo
+        title="SaaS Ecosystem Case Study — Shared Platform Architecture | MAK Software Solutions"
+        description="How MAK Software Solutions built a 17-repository shared SaaS architecture enabling rapid deployment of new products with common auth, billing, and infrastructure layers."
+        path="/work/saas-ecosystem"
+        ogType="article"
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work' },
+          { name: 'SaaS Ecosystem', path: '/work/saas-ecosystem' },
+        ]}
+      />
 
       {/* HERO */}
       <section className="pt-40 pb-20 px-6 bg-[#EBE5DA] relative overflow-hidden">
