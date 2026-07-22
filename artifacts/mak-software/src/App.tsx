@@ -46,7 +46,14 @@ function Router() {
   );
 }
 
-function App() {
+type AppProps = {
+  /** Route to render during server-side prerendering. */
+  ssrPath?: string;
+  /** Context object react-helmet-async fills during SSR. */
+  helmetContext?: Record<string, unknown>;
+};
+
+function App({ ssrPath, helmetContext }: AppProps = {}) {
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -72,11 +79,14 @@ function App() {
   }, []);
 
   return (
-    <HelmetProvider>
+    <HelmetProvider context={helmetContext}>
       <ThemeProvider defaultTheme="system" storageKey="mak-theme">
         <QueryClientProvider client={queryClient}>
           <TooltipProvider>
-            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+            <WouterRouter
+              base={(import.meta.env?.BASE_URL ?? '/').replace(/\/$/, '')}
+              ssrPath={ssrPath}
+            >
               <Router />
             </WouterRouter>
             <Toaster />
