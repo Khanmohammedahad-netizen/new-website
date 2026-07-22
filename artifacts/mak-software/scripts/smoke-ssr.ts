@@ -6,6 +6,14 @@ import { render } from '../src/entry-server';
 
 const ROUTES = [
   '/',
+  '/services',
+  '/services/ai-development',
+  '/services/erp',
+  '/services/crm',
+  '/services/mobile-apps',
+  '/services/automation',
+  '/services/saas',
+  '/about',
   '/work',
   '/work/third-place',
   '/work/mak-os',

@@ -1,5 +1,6 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+import CaseStudyFooter from '@/components/CaseStudyFooter';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Layers, FileCode2, Shield, Repeat } from 'lucide-react';
 
@@ -80,6 +81,7 @@ export default function SaasEcosystem() {
           </AnimatedSection>
         </div>
       </section>
+      <CaseStudyFooter current="saas-ecosystem" />
     </div>
   );
 }

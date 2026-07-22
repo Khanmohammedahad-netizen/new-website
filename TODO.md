@@ -9,10 +9,10 @@
 - [ ] True 404 status for unknown routes (currently 200 + noindex spa.html)
 
 ## Phase 3 — IA & trust
-- [ ] /services hub + 6 child pages (ai, erp, crm, mobile, automation, saas)
-- [ ] /about with founder bio (Person schema)
+- [x] /services hub + 6 child pages (ai, erp, crm, mobile, automation, saas) — DONE 2026-07-23
+- [x] /about with founder bio (Person schema) — DONE 2026-07-23
+- [x] Case-study pages: add next/prev + bottom CTA — DONE 2026-07-23
 - [ ] /industries pages (healthcare first)
-- [ ] Case-study pages: add next/prev + bottom CTA
 - [ ] Client logos + named testimonials (needs permission)
 - [ ] Fix email domain mismatch (hello@maksoftware.com → @maksoftwaresolutions.com)
 - [ ] Align "Founded 2025" vs "2+ years experience" copy

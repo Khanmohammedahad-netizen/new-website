@@ -1,5 +1,20 @@
 # Completed
 
+## 2026-07-23 — Phase 3: Information architecture & trust
+- 6 service pages (`/services/{ai-development,erp,crm,mobile-apps,automation,saas}`)
+  with unique long-form copy: problem/approach, deliverables, tech stack,
+  service-specific FAQs (FAQPage schema), linked case studies, related services
+- `/services` hub page
+- `/about` — founder-led studio story, principles, timeline; Person +
+  AboutPage schema (E-E-A-T anchor)
+- Service schema JSON-LD on every service page (provider → Organization @id)
+- Navbar: Services / Work / About / Contact; Footer: full services column
+- Home service cards now link to service pages (9 cards → 6 targets)
+- Case studies: prev/next navigation + CTA footer on all 5 (no more dead ends)
+- Sitemap, prerender, and smoke-test route lists → 16 routes
+- Verified: 16/16 SSR-render with title, canonical, JSON-LD; service pages
+  ~5 kB text each
+
 ## 2026-07-23 — Phase 2: Prerendering
 - SSR entry (`src/entry-server.tsx`) + post-build prerender script for all 8 routes
 - Every route now serves full static HTML: title, meta description, canonical,

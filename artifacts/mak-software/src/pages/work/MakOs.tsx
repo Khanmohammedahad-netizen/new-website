@@ -1,5 +1,6 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+import CaseStudyFooter from '@/components/CaseStudyFooter';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Terminal, Database, Network, Cpu } from 'lucide-react';
 
@@ -76,6 +77,7 @@ export default function MakOs() {
           </AnimatedSection>
         </div>
       </section>
+      <CaseStudyFooter current="mak-os" />
     </div>
   );
 }

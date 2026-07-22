@@ -283,22 +283,24 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Cpu, title: "AI Solutions", desc: "Building intelligent systems that learn, adapt, and improve operations." },
-              { icon: Terminal, title: "AI Agents", desc: "Autonomous multi-agent systems for complex business workflows." },
-              { icon: Database, title: "Enterprise Software", desc: "Mission-critical platforms built for scale and reliability." },
-              { icon: Layout, title: "SaaS Platforms", desc: "Full-stack cloud products from architecture to deployment." },
-              { icon: Smartphone, title: "Mobile Apps", desc: "Native-quality cross-platform applications." },
-              { icon: Blocks, title: "ERP Systems", desc: "Integrated enterprise resource planning tailored to operations." },
-              { icon: Code2, title: "API Development", desc: "Secure, documented, high-performance API infrastructure." },
-              { icon: CheckCircle2, title: "Automation", desc: "Business process automation that eliminates manual work." },
-              { icon: Layout, title: "Dashboards", desc: "Real-time analytics and operational intelligence interfaces." }
+              { icon: Cpu, title: "AI Solutions", desc: "Building intelligent systems that learn, adapt, and improve operations.", href: "/services/ai-development" },
+              { icon: Terminal, title: "AI Agents", desc: "Autonomous multi-agent systems for complex business workflows.", href: "/services/ai-development" },
+              { icon: Database, title: "Enterprise Software", desc: "Mission-critical platforms built for scale and reliability.", href: "/services/erp" },
+              { icon: Layout, title: "SaaS Platforms", desc: "Full-stack cloud products from architecture to deployment.", href: "/services/saas" },
+              { icon: Smartphone, title: "Mobile Apps", desc: "Native-quality cross-platform applications.", href: "/services/mobile-apps" },
+              { icon: Blocks, title: "ERP Systems", desc: "Integrated enterprise resource planning tailored to operations.", href: "/services/erp" },
+              { icon: Code2, title: "API Development", desc: "Secure, documented, high-performance API infrastructure.", href: "/services/saas" },
+              { icon: CheckCircle2, title: "Automation", desc: "Business process automation that eliminates manual work.", href: "/services/automation" },
+              { icon: Layout, title: "Dashboards", desc: "Real-time analytics and operational intelligence interfaces.", href: "/services/automation" }
             ].map((service, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
-                <div className="group bg-white p-8 border border-[#E5E0D8] hover:border-[#2D5A3D] transition-all duration-300 h-full hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1A3D2B]/5 cursor-default">
-                  <service.icon className="w-8 h-8 text-[#2D5A3D] mb-6 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="font-sans font-medium text-xl mb-3">{service.title}</h3>
-                  <p className="font-sans text-sm text-[#111411]/70 leading-relaxed font-light">{service.desc}</p>
-                </div>
+                <Link href={service.href}>
+                  <div className="group bg-white p-8 border border-[#E5E0D8] hover:border-[#2D5A3D] transition-all duration-300 h-full hover:-translate-y-1 hover:shadow-xl hover:shadow-[#1A3D2B]/5 cursor-pointer">
+                    <service.icon className="w-8 h-8 text-[#2D5A3D] mb-6 group-hover:scale-110 transition-transform duration-300" />
+                    <h3 className="font-sans font-medium text-xl mb-3">{service.title}</h3>
+                    <p className="font-sans text-sm text-[#111411]/70 leading-relaxed font-light">{service.desc}</p>
+                  </div>
+                </Link>
               </AnimatedSection>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+import CaseStudyFooter from '@/components/CaseStudyFooter';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Brain, Cpu, Database, Zap } from 'lucide-react';
 
@@ -72,6 +73,7 @@ export default function LeadmineAi() {
           </AnimatedSection>
         </div>
       </section>
+      <CaseStudyFooter current="leadmine-ai" />
     </div>
   );
 }

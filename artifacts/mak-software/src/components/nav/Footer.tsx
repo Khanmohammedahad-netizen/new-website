@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-background border-t border-border pt-16 pb-8">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex flex-col group mb-6 inline-block" data-testid="link-footer-home">
               <div className="flex items-center gap-2">
@@ -25,6 +25,18 @@ export default function Footer() {
           </div>
           
           <div>
+            <h4 className="font-mono text-sm tracking-wider uppercase mb-6">Services</h4>
+            <ul className="flex flex-col gap-3 font-sans text-sm">
+              <li><Link href="/services/ai-development" className="text-muted-foreground hover:text-foreground transition-colors">AI Development</Link></li>
+              <li><Link href="/services/erp" className="text-muted-foreground hover:text-foreground transition-colors">ERP Development</Link></li>
+              <li><Link href="/services/crm" className="text-muted-foreground hover:text-foreground transition-colors">CRM Development</Link></li>
+              <li><Link href="/services/mobile-apps" className="text-muted-foreground hover:text-foreground transition-colors">Mobile Apps</Link></li>
+              <li><Link href="/services/automation" className="text-muted-foreground hover:text-foreground transition-colors">Automation</Link></li>
+              <li><Link href="/services/saas" className="text-muted-foreground hover:text-foreground transition-colors">SaaS Platforms</Link></li>
+            </ul>
+          </div>
+
+          <div>
             <h4 className="font-mono text-sm tracking-wider uppercase mb-6">Work</h4>
             <ul className="flex flex-col gap-3 font-sans text-sm">
               <li><Link href="/work/mak-os" className="text-muted-foreground hover:text-foreground transition-colors">MAK OS v1</Link></li>
@@ -36,17 +48,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-mono text-sm tracking-wider uppercase mb-6">Connect</h4>
+            <h4 className="font-mono text-sm tracking-wider uppercase mb-6">Company</h4>
             <ul className="flex flex-col gap-3 font-sans text-sm">
+              <li>
+                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Contact
+                </Link>
+              </li>
               <li>
                 <a href="https://wa.me/917702448705" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                   WhatsApp
                 </a>
-              </li>
-              <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact Form
-                </Link>
               </li>
             </ul>
           </div>

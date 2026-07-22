@@ -1,5 +1,6 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+import CaseStudyFooter from '@/components/CaseStudyFooter';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Building2, Globe2, BarChart3, ShieldCheck } from 'lucide-react';
 
@@ -74,6 +75,7 @@ export default function SevenStarErp() {
           </AnimatedSection>
         </div>
       </section>
+      <CaseStudyFooter current="7star-erp" />
     </div>
   );
 }

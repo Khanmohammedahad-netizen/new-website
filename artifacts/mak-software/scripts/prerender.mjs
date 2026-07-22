@@ -19,6 +19,14 @@ const templatePath = path.join(publicDir, 'index.html');
 
 const ROUTES = [
   '/',
+  '/services',
+  '/services/ai-development',
+  '/services/erp',
+  '/services/crm',
+  '/services/mobile-apps',
+  '/services/automation',
+  '/services/saas',
+  '/about',
   '/work',
   '/work/third-place',
   '/work/mak-os',

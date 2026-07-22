@@ -1,5 +1,6 @@
 import React from 'react';
 import Seo from '@/components/Seo';
+import CaseStudyFooter from '@/components/CaseStudyFooter';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { Map, Users, Compass, Zap } from 'lucide-react';
 
@@ -81,6 +82,7 @@ export default function ThirdPlace() {
           </AnimatedSection>
         </div>
       </section>
+      <CaseStudyFooter current="third-place" />
     </div>
   );
 }
