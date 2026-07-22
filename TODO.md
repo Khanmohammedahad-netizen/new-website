@@ -1,11 +1,12 @@
 # TODO — SEO & Site Quality
 
-## Next up (Phase 2 — rendering/perf)
-- [ ] Prerender all 8 routes to static HTML at build (AI crawlers can't run JS) — HIGHEST IMPACT
-- [ ] Lazy-load ThreeCanvas/NeuralNetwork after first paint
+## Next up (Phase 2 remainder — perf polish)
+- [x] Prerender all 8 routes to static HTML at build — DONE 2026-07-23
+- [x] Lazy-load ThreeCanvas (was already React.lazy + WebGL-gated — verified)
 - [ ] manualChunks: react / three / motion vendors
 - [ ] Self-host fonts with font-display: swap
 - [ ] Lighthouse run + record scores in seo/performance.md
+- [ ] True 404 status for unknown routes (currently 200 + noindex spa.html)
 
 ## Phase 3 — IA & trust
 - [ ] /services hub + 6 child pages (ai, erp, crm, mobile, automation, saas)

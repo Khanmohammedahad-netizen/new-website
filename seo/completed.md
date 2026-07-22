@@ -1,5 +1,18 @@
 # Completed
 
+## 2026-07-23 — Phase 2: Prerendering
+- SSR entry (`src/entry-server.tsx`) + post-build prerender script for all 8 routes
+- Every route now serves full static HTML: title, meta description, canonical,
+  OG/Twitter, JSON-LD, and complete page text — visible to non-JS AI crawlers
+  (GPTBot, ClaudeBot, PerplexityBot) and social scrapers
+- **Fixed critical bug: deep routes (/work, /work/*, /contact) returned 404 on
+  direct load** — sitemap URLs were uncrawlable; now all 200
+- spa.html fallback + Vercel rewrite for unknown routes (noindex 404 UI)
+- SSR-safe theme provider (localStorage guard)
+- Verified live: 8/8 routes 200 with prerendered content; homepage raw HTML
+  carries ~10 kB text incl. FAQPage/ProfessionalService schema; smoke test
+  script for local regression checks (scripts/smoke-ssr.ts)
+
 ## 2026-07-23 — Phase 1: Technical foundation
 - Built `src/components/Seo.tsx` (title/description/canonical/OG/Twitter/JSON-LD/breadcrumbs, noindex flag)
 - Unique titles + meta descriptions + canonicals on all 8 routes
