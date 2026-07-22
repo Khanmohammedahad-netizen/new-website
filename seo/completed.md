@@ -1,5 +1,18 @@
 # Completed
 
+## 2026-07-23 — Phase 4: Topical authority (content clusters)
+- `/insights` hub + 4 cornerstone articles (~7 kB text each), all prerendered:
+  - What are AI agents? A business owner's guide
+  - The LLM cost guide (OpenAI vs Claude vs Gemini vs open models)
+  - Custom ERP vs off-the-shelf: the real cost comparison
+  - How to automate B2B lead generation with AI
+- Every article: Article schema with author Person → /about (E-E-A-T),
+  publisher → Organization @id, dates, FAQ block with FAQPage schema,
+  cluster interlinks (article ↔ service pillar ↔ case study), CTA
+- Content grounded in shipped projects (MAK OS, LeadMine, 7STAR) — original
+  insight, no AI-filler patterns
+- Navbar + footer Insights links; sitemap/prerender/smoke → 21 routes
+
 ## 2026-07-23 — Phase 3: Information architecture & trust
 - 6 service pages (`/services/{ai-development,erp,crm,mobile-apps,automation,saas}`)
   with unique long-form copy: problem/approach, deliverables, tech stack,

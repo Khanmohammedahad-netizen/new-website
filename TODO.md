@@ -23,8 +23,11 @@
 - [ ] Confirm/create hello@maksoftwaresolutions.com inbox
 
 ## Phase 4 — content
-- [ ] First 2 cluster articles (see seo/content-plan.md)
-- [ ] Author page for E-E-A-T
+- [x] First 4 cluster articles — DONE 2026-07-23 (/insights)
+- [x] Author attribution → /about Person schema — DONE 2026-07-23
+- [ ] Next articles (2/month cadence): Azure AI guide, OpenAI integration guide,
+      multi-tenant SaaS architecture explained, Mapbox location apps
+- [ ] Article OG images per post (currently shared og.png)
 
 ## Done
 - [x] Phase 1 technical foundation (2026-07-23) — see seo/completed.md

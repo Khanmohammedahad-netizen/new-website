@@ -14,6 +14,8 @@ import Work from '@/pages/Work';
 import Services from '@/pages/Services';
 import ServiceDetail from '@/pages/ServiceDetail';
 import About from '@/pages/About';
+import Insights from '@/pages/Insights';
+import ArticleDetail from '@/pages/ArticleDetail';
 import ThirdPlace from '@/pages/work/ThirdPlace';
 import MakOs from '@/pages/work/MakOs';
 import SevenStarErp from '@/pages/work/SevenStarErp';
@@ -39,6 +41,10 @@ function Router() {
             {(params) => <ServiceDetail slug={params.slug} />}
           </Route>
           <Route path="/about" component={About} />
+          <Route path="/insights" component={Insights} />
+          <Route path="/insights/:slug">
+            {(params) => <ArticleDetail slug={params.slug} />}
+          </Route>
           <Route path="/work" component={Work} />
           <Route path="/work/third-place" component={ThirdPlace} />
           <Route path="/work/mak-os" component={MakOs} />
