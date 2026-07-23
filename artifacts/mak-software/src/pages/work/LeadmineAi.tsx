@@ -8,7 +8,7 @@ export default function LeadmineAi() {
   return (
     <div className="min-h-screen bg-[#050B14] text-white">
       <Seo
-        title="LeadMine AI Case Study — AI Lead Intelligence Platform | MAK Software Solutions"
+        title="LeadMine AI Case Study - AI Lead Intelligence Platform | MAK Software Solutions"
         description="How MAK Software Solutions built LeadMine AI, an AI-driven lead intelligence platform routing across Groq, Gemini, and Ollama models for high-volume B2B lead scoring and enrichment."
         path="/work/leadmine-ai"
         ogType="article"

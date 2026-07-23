@@ -9,8 +9,8 @@ export default function Insights() {
   return (
     <div className="pt-32 pb-32 min-h-screen bg-background">
       <Seo
-        title="Insights — AI, ERP & Software Engineering Guides | MAK Software Solutions"
-        description="Practical engineering guides from shipped projects: AI agents, LLM costs, custom ERP economics, and B2B automation — written by the team that builds them."
+        title="Insights - AI, ERP & Software Engineering Guides | MAK Software Solutions"
+        description="Practical engineering guides from shipped projects: AI agents, LLM costs, custom ERP economics, and B2B automation - written by the team that builds them."
         path="/insights"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -24,7 +24,7 @@ export default function Insights() {
             <h1 className="font-serif text-5xl md:text-7xl mb-6">Insights.</h1>
             <p className="font-sans text-xl text-muted-foreground font-light">
               Working notes from systems we actually ship: AI agents, LLM economics, enterprise
-              software decisions. No filler — every piece comes from production experience.
+              software decisions. No filler - every piece comes from production experience.
             </p>
           </div>
         </AnimatedSection>

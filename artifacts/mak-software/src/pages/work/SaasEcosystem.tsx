@@ -8,7 +8,7 @@ export default function SaasEcosystem() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
-        title="SaaS Ecosystem Case Study — Shared Platform Architecture | MAK Software Solutions"
+        title="SaaS Ecosystem Case Study - Shared Platform Architecture | MAK Software Solutions"
         description="How MAK Software Solutions built a 17-repository shared SaaS architecture enabling rapid deployment of new products with common auth, billing, and infrastructure layers."
         path="/work/saas-ecosystem"
         ogType="article"

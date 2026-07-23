@@ -10,7 +10,7 @@ export default function Services() {
     <div className="pt-32 pb-32 min-h-screen bg-background">
       <Seo
         title="Software Development Services | MAK Software Solutions"
-        description="AI development, custom ERP and CRM, mobile apps, business automation, and SaaS platforms — engineering services from MAK Software Solutions for India, UAE, UK, and USA."
+        description="AI development, custom ERP and CRM, mobile apps, business automation, and SaaS platforms - engineering services from MAK Software Solutions for India, UAE, UK, and USA."
         path="/services"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -57,7 +57,7 @@ export default function Services() {
         <AnimatedSection delay={0.2}>
           <div className="mt-24 text-center">
             <p className="font-sans text-lg text-muted-foreground font-light mb-8">
-              Not sure which fits? Describe the problem — we'll tell you what it takes.
+              Not sure which fits? Describe the problem - we'll tell you what it takes.
             </p>
             <Link
               href="/contact"

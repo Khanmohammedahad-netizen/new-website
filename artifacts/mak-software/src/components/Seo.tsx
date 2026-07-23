@@ -13,7 +13,7 @@ type BreadcrumbItem = {
 type SeoProps = {
   title: string;
   description: string;
-  /** Route path beginning with "/" — used to build the canonical URL. */
+  /** Route path beginning with "/" - used to build the canonical URL. */
   path: string;
   ogType?: 'website' | 'article';
   ogImage?: string;

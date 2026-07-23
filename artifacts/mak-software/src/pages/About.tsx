@@ -27,7 +27,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Ship in weeks, iterate for years',
-    desc: 'First working release in weeks — then the system grows against real usage. Long planning phases are where projects go to die.',
+    desc: 'First working release in weeks - then the system grows against real usage. Long planning phases are where projects go to die.',
   },
   {
     title: 'AI where it earns its place',
@@ -49,7 +49,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
-        title="About Us — Founder-Led Engineering Studio | MAK Software Solutions"
+        title="About Us - Founder-Led Engineering Studio | MAK Software Solutions"
         description="MAK Software Solutions is a founder-led software engineering studio in Hyderabad, India, building AI systems, ERP platforms, and SaaS products for clients across India, UAE, UK, and USA."
         path="/about"
         breadcrumbs={[
@@ -92,11 +92,11 @@ export default function About() {
                 The studio is founder-led by <strong className="font-medium">Mohammed Ahad Khan</strong>,
                 who architects and builds alongside the team on every engagement. That means the
                 person who scopes your system is the person accountable for it running in
-                production — no telephone game between sales, management, and engineering.
+                production - no telephone game between sales, management, and engineering.
               </p>
               <p>
                 We are AI-first because we use this technology on ourselves. Our own operations run
-                on the agent systems we sell — <Link href="/work/mak-os" className="border-b border-[#111411]/40 hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">MAK OS</Link> handles
+                on the agent systems we sell - <Link href="/work/mak-os" className="border-b border-[#111411]/40 hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">MAK OS</Link> handles
                 our B2B pipeline autonomously. When we tell you what AI can and cannot do for your
                 business, it comes from operating it, not reading about it.
               </p>

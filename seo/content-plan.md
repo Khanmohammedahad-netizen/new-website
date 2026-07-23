@@ -1,4 +1,4 @@
-# Content Plan — Topical Authority
+# Content Plan - Topical Authority
 
 ## Pillar 1: AI Development Company (maps to /services/ai-development)
 Cluster articles (each links to pillar + siblings + a case study):

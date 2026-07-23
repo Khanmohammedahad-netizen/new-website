@@ -8,7 +8,7 @@ export default function MakOs() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white selection:bg-[#2D5A3D] selection:text-white">
       <Seo
-        title="MAK OS Case Study — Autonomous AI Agent Platform | MAK Software Solutions"
+        title="MAK OS Case Study - Autonomous AI Agent Platform | MAK Software Solutions"
         description="How MAK Software Solutions built MAK OS, an autonomous multi-agent B2B acquisition pipeline that automates lead discovery, enrichment, and outreach with LLM-powered agents."
         path="/work/mak-os"
         ogType="article"

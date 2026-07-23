@@ -37,7 +37,7 @@ for (const route of ROUTES) {
     const jsonLd = (html.match(/application\/ld\+json/g) || []).length;
     const textLen = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').length;
     console.log(
-      `OK ${route} — title="${titleMatch?.[1] ?? 'MISSING'}" canonical=${canonical} jsonLd=${jsonLd} text=${textLen}ch`,
+      `OK ${route} - title="${titleMatch?.[1] ?? 'MISSING'}" canonical=${canonical} jsonLd=${jsonLd} text=${textLen}ch`,
     );
     if (!titleMatch || !canonical || textLen < 500) failed++;
   } catch (err) {

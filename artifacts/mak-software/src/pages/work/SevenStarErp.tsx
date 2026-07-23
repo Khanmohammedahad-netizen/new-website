@@ -8,7 +8,7 @@ export default function SevenStarErp() {
   return (
     <div className="min-h-screen bg-[#F8F9FA] text-[#0F172A]">
       <Seo
-        title="7STAR ERP Case Study — Enterprise Resource Planning | MAK Software Solutions"
+        title="7STAR ERP Case Study - Enterprise Resource Planning | MAK Software Solutions"
         description="How MAK Software Solutions built 7STAR ERP, a centralized enterprise resource planning system managing global operations, inventory, finance, and workforce for an international business."
         path="/work/7star-erp"
         ogType="article"

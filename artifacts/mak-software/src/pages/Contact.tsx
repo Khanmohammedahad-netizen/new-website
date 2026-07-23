@@ -49,8 +49,8 @@ Message: ${values.message}`;
   return (
     <div className="min-h-screen bg-[#F5F0E8] pt-32 pb-24">
       <Seo
-        title="Contact Us — Start a Project | MAK Software Solutions"
-        description="Start a software project with MAK Software Solutions. Get a technical proposal with architecture, timeline, and pricing. Reach us via WhatsApp or the contact form — we respond within 24 hours."
+        title="Contact Us - Start a Project | MAK Software Solutions"
+        description="Start a software project with MAK Software Solutions. Get a technical proposal with architecture, timeline, and pricing. Reach us via WhatsApp or the contact form - we respond within 24 hours."
         path="/contact"
         breadcrumbs={[
           { name: 'Home', path: '/' },

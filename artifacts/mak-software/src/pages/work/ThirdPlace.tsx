@@ -8,7 +8,7 @@ export default function ThirdPlace() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
-        title="Third Place Case Study — Vibe-Based Discovery App | MAK Software Solutions"
+        title="Third Place Case Study - Vibe-Based Discovery App | MAK Software Solutions"
         description="How MAK Software Solutions built Third Place, a vibe-based mobile discovery platform for coffee shops and workspaces with Mapbox maps, real-time occupancy, and AI vibe matching."
         path="/work/third-place"
         ogType="article"

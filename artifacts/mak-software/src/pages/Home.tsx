@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: 'Do you work with AI technologies like OpenAI, Claude, and Azure AI?',
-    a: 'Yes. AI integration is one of our core specialties — we build autonomous agent systems, LLM-powered workflows, and intelligent automation using OpenAI, Anthropic Claude, Google Gemini, Groq, and Azure AI services.',
+    a: 'Yes. AI integration is one of our core specialties - we build autonomous agent systems, LLM-powered workflows, and intelligent automation using OpenAI, Anthropic Claude, Google Gemini, Groq, and Azure AI services.',
   },
   {
     q: 'How do I start a project with MAK Software Solutions?',
