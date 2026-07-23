@@ -8,5 +8,5 @@
 | 4 | Static OG tags in index.html + Helmet duplicates on inner pages | Low | Consider removing static og:* once prerendering lands |
 | 5 | Unknown routes return HTTP 200 (soft 404) | Low | Prerender/edge middleware to return real 404 |
 | 6 | No Google Search Console / Bing Webmaster verification detected | High | Owner: verify domain, submit sitemap.xml |
-| 7 | Testimonials are anonymous ("CTO, Fintech") - weak E-E-A-T | Medium | Get named/linked testimonials or client logos with permission |
+| 7 | RESOLVED 2026-07-23: removed fabricated anonymous testimonials from Home | - | Re-add only real, named/linked testimonials or client logos with permission |
 | 8 | Founded "2025" + "2+ years experience" stats slightly inconsistent | Low | Align copy |

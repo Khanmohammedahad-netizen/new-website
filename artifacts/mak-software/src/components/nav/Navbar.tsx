@@ -39,8 +39,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-background/70 backdrop-blur-md border-b border-border py-3'
-            : 'bg-transparent py-5'
+            ? 'bg-background/80 backdrop-blur-md border-b border-border py-3'
+            : 'bg-background/50 backdrop-blur-sm py-5'
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -63,7 +63,7 @@ export default function Navbar() {
                   className="font-sans text-sm font-medium relative group"
                   data-testid={`link-${link.name.toLowerCase()}`}
                 >
-                  <span className="relative z-10 text-foreground/80 transition-colors group-hover:text-foreground">
+                  <span className="relative z-10 text-foreground/90 transition-colors group-hover:text-foreground">
                     {link.name}
                   </span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />

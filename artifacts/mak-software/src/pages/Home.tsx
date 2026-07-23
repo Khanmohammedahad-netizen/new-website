@@ -488,50 +488,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10. TESTIMONIALS */}
-      <section className="py-32 bg-[#F5F0E8] text-[#111411]">
-        <div className="container mx-auto px-6">
-          <AnimatedSection>
-            <h2 className="font-serif text-4xl md:text-5xl mb-16 text-center">What clients say.</h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                quote: "MAK delivered an ERP system in 6 weeks that our previous vendor quoted 18 months for. The quality was exceptional.",
-                author: "CTO, Fintech",
-                location: "Singapore"
-              },
-              {
-                quote: "The AI agent they built automated our entire outreach pipeline. We went from 20 hours a week of manual work to zero.",
-                author: "Founder, Startup",
-                location: "UAE"
-              },
-              {
-                quote: "If you need software that actually works at scale, MAK Software is the only call you need to make. True engineering partners.",
-                author: "VP Engineering, Enterprise",
-                location: "United Kingdom"
-              }
-            ].map((t, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="bg-white p-8 md:p-10 border border-[#E5E0D8] h-full flex flex-col justify-between">
-                  <div>
-                    <div className="font-serif text-6xl text-[#2D5A3D] mb-4 opacity-30">"</div>
-                    <p className="font-sans font-light text-lg md:text-xl leading-relaxed mb-8">
-                      {t.quote}
-                    </p>
-                  </div>
-                  <div className="pt-6 border-t border-[#E5E0D8]">
-                    <div className="font-sans font-medium text-sm">{t.author}</div>
-                    <div className="font-mono text-xs text-[#111411]/60 uppercase tracking-widest mt-1">{t.location}</div>
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 11. FAQ */}
       <section className="py-32 bg-[#0A0A0A] text-white border-t border-white/5">
         <div className="container mx-auto px-6">
