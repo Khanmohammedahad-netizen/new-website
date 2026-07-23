@@ -34,13 +34,36 @@ export default function Navbar() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Tone of the hero section at the top of each route, so transparent-navbar
+  // text stays readable: 'dark' heroes -> white text, 'light' heroes -> forest
+  // green, 'themed' (bg-background) -> green in light mode, white in dark mode.
+  function heroTone(path: string): 'dark' | 'light' | 'themed' {
+    if (path === '/') return 'dark';
+    if (path === '/about') return 'dark';
+    if (path === '/contact') return 'light';
+    if (path === '/work/third-place' || path === '/work/saas-ecosystem') return 'light';
+    if (path === '/work/mak-os' || path === '/work/7star-erp' || path === '/work/leadmine-ai') return 'dark';
+    if (path.startsWith('/services/')) return 'dark';
+    if (path.startsWith('/insights/')) return 'dark';
+    // Hubs and listing pages render on bg-background (theme-dependent).
+    return 'themed';
+  }
+
+  const tone = isScrolled ? 'themed' : heroTone(location);
+  const textColor =
+    tone === 'dark'
+      ? 'text-white'
+      : tone === 'light'
+        ? 'text-[#2D5A3D]'
+        : 'text-[#2D5A3D] dark:text-white';
+
   return (
     <>
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${textColor} ${
           isScrolled
             ? 'bg-background/80 backdrop-blur-md border-b border-border py-3'
-            : 'bg-background/50 backdrop-blur-sm py-5'
+            : 'bg-transparent py-5'
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -49,7 +72,7 @@ export default function Navbar() {
               <span className="font-mono font-medium text-xl tracking-tighter">MAK</span>
               <div className="w-2 h-2 bg-primary rounded-sm transition-transform duration-300 group-hover:rotate-45" />
             </div>
-            <span className="font-sans text-[0.6rem] tracking-widest text-muted-foreground uppercase mt-0.5">
+            <span className="font-sans text-[0.6rem] tracking-widest uppercase mt-0.5 opacity-60">
               Software Solutions
             </span>
           </Link>
@@ -63,7 +86,7 @@ export default function Navbar() {
                   className="font-sans text-sm font-medium relative group"
                   data-testid={`link-${link.name.toLowerCase()}`}
                 >
-                  <span className="relative z-10 text-foreground/90 transition-colors group-hover:text-foreground">
+                  <span className="relative z-10 opacity-90 transition-opacity group-hover:opacity-100">
                     {link.name}
                   </span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
@@ -84,7 +107,7 @@ export default function Navbar() {
               
               <Link 
                 href="/contact" 
-                className="font-mono text-xs font-medium px-4 py-2 border border-border rounded hover:border-primary hover:bg-primary/5 transition-colors"
+                className="font-mono text-xs font-medium px-4 py-2 border border-current rounded opacity-70 hover:opacity-100 hover:border-primary hover:text-primary transition-all"
                 data-testid="link-start-project-nav"
               >
                 START PROJECT
