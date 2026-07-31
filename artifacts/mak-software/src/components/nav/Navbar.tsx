@@ -3,6 +3,7 @@ import { Link, useLocation } from 'wouter';
 import { useTheme } from '@/lib/theme';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Logo from '@/components/brand/Logo';
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
@@ -67,14 +68,8 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
-          <Link href="/" className="flex flex-col group" data-testid="link-home">
-            <div className="flex items-center gap-2">
-              <span className="font-mono font-medium text-xl tracking-tighter">MAK</span>
-              <div className="w-2 h-2 bg-primary rounded-sm transition-transform duration-300 group-hover:rotate-45" />
-            </div>
-            <span className="font-sans text-[0.6rem] tracking-widest uppercase mt-0.5 opacity-60">
-              Software Solutions
-            </span>
+          <Link href="/" className="group" data-testid="link-home" aria-label="MAK Software Solutions home">
+            <Logo />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

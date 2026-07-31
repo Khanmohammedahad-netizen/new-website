@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 import { ThemeProvider } from '@/lib/theme';
 import { HelmetProvider } from 'react-helmet-async';
 import Lenis from 'lenis';
@@ -29,9 +29,28 @@ import Footer from '@/components/nav/Footer';
 
 const queryClient = new QueryClient();
 
+// Shared so route changes can reset the smooth-scroll position.
+let lenisInstance: Lenis | null = null;
+
+// Scroll to the top of the page on every route change. Without this, wouter
+// keeps the previous scroll position and Lenis's virtual scroll leaves new
+// pages opening partway down (or at the bottom).
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    if (lenisInstance) {
+      lenisInstance.scrollTo(0, { immediate: true });
+    } else if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Switch>
@@ -85,10 +104,12 @@ function App({ ssrPath, helmetContext }: AppProps = {}) {
       rafId = requestAnimationFrame(raf);
     }
 
+    lenisInstance = lenis;
     rafId = requestAnimationFrame(raf);
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      lenisInstance = null;
     };
   }, []);
 

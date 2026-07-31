@@ -63,10 +63,13 @@ function extractHeadTags(html) {
 
 const template = fs.readFileSync(templatePath, 'utf-8');
 
-// Preserve the untouched template as the SPA fallback for unknown routes
-// (served via the Vercel rewrite → renders the noindex 404 page client-side).
+// Emit 404.html: Vercel serves this with a real 404 status for any path that
+// doesn't match a prerendered file. It boots the SPA, which renders the
+// noindex NotFound page client-side. This turns Google "soft 404" into a
+// proper hard 404. Every real route is prerendered to its own file, so only
+// genuinely-missing URLs fall through here.
 fs.writeFileSync(
-  path.join(publicDir, 'spa.html'),
+  path.join(publicDir, '404.html'),
   template.replace('<!--seo:start-->', '').replace('<!--seo:end-->', ''),
 );
 

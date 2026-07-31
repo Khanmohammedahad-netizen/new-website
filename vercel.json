@@ -1,11 +1,5 @@
 {
   "framework": null,
   "buildCommand": "sh -c 'pnpm --filter @workspace/mak-software build && mv artifacts/mak-software/dist/public ./build'",
-  "outputDirectory": "build",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/spa.html"
-    }
-  ]
+  "outputDirectory": "build"
 }

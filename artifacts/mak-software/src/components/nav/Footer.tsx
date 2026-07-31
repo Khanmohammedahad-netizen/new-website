@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
+import Logo from '@/components/brand/Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,14 +10,8 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex flex-col group mb-6 inline-block" data-testid="link-footer-home">
-              <div className="flex items-center gap-2">
-                <span className="font-mono font-medium text-2xl tracking-tighter">MAK</span>
-                <div className="w-2.5 h-2.5 bg-primary rounded-sm" />
-              </div>
-              <span className="font-sans text-[0.65rem] tracking-widest text-muted-foreground uppercase mt-1">
-                Software Solutions
-              </span>
+            <Link href="/" className="inline-block mb-6" data-testid="link-footer-home" aria-label="MAK Software Solutions home">
+              <Logo />
             </Link>
             <p className="text-muted-foreground max-w-sm font-sans text-sm leading-relaxed">
               Elite global engineering firm building software that scales. 
