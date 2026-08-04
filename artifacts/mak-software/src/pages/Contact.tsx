@@ -63,6 +63,26 @@ Message: ${values.message}`;
             name: 'Contact MAK Software Solutions',
             url: 'https://www.maksoftwaresolutions.com/contact',
           },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            '@id': 'https://www.maksoftwaresolutions.com/#organization',
+            name: 'MAK Software Solutions',
+            url: 'https://www.maksoftwaresolutions.com/',
+            telephone: '+91-7702448705',
+            email: 'hello@maksoftware.com',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Hyderabad',
+              addressRegion: 'Telangana',
+              addressCountry: 'IN',
+            },
+            areaServed: [
+              'India', 'United Arab Emirates', 'Saudi Arabia',
+              'United Kingdom', 'United States', 'Singapore', 'Australia',
+            ],
+            openingHours: 'Mo-Fr 09:00-18:00',
+          },
         ]}
       />
 
