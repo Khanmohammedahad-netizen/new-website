@@ -43,7 +43,7 @@ export default function Navbar() {
     if (path === '/about') return 'dark';
     if (path === '/contact') return 'light';
     if (path === '/work/third-place' || path === '/work/saas-ecosystem') return 'light';
-    if (path === '/work/mak-os' || path === '/work/7star-erp' || path === '/work/leadmine-ai') return 'dark';
+    if (path === '/work/aero' || path === '/work/mak-os' || path === '/work/7star-erp' || path === '/work/leadmine-ai') return 'dark';
     if (path.startsWith('/services/')) return 'dark';
     if (path.startsWith('/insights/')) return 'dark';
     // Hubs and listing pages render on bg-background (theme-dependent).

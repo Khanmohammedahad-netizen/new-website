@@ -8,8 +8,8 @@ export default function ThirdPlace() {
   return (
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
-        title="Third Place Case Study - Vibe-Based Discovery App | MAK Software Solutions"
-        description="How MAK Software Solutions built Third Place, a vibe-based mobile discovery platform for coffee shops and workspaces with Mapbox maps, real-time occupancy, and AI vibe matching."
+        title="Third Place Case Study - Café Discovery App for Hyderabad | MAK Software Solutions"
+        description="How MAK Software Solutions built Third Place, a café-discovery platform for Hyderabad: a React Native consumer app, a Café OS operator dashboard, and a live Mapbox map on one Supabase backend."
         path="/work/third-place"
         ogType="article"
         breadcrumbs={[
@@ -24,21 +24,22 @@ export default function ThirdPlace() {
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs tracking-widest uppercase">2025</span>
+              <span className="font-mono text-xs tracking-widest uppercase">2025-26</span>
               <span className="w-1 h-1 rounded-full bg-[#111411]" />
-              <span className="font-mono text-xs tracking-widest uppercase">Mobile Application</span>
+              <span className="font-mono text-xs tracking-widest uppercase">Mobile App + Operator Platform</span>
             </div>
             <h1 className="font-serif text-6xl md:text-8xl mb-8">Third Place</h1>
             <p className="font-sans text-xl md:text-2xl max-w-2xl font-light opacity-80 mb-8">
-              A vibe-based discovery platform connecting remote workers with the perfect environments.
+              A café-discovery platform for Hyderabad, built as three connected products. In
+              pre-launch toward its first city cohort.
             </p>
             <a
-              href="https://the3rdplace.com"
+              href="https://the3rdplaceapp.com"
               target="_blank"
               rel="noreferrer"
               className="inline-block border border-[#111411] hover:bg-[#111411] hover:text-[#F5F0E8] px-6 py-3 rounded-sm font-mono text-xs tracking-widest uppercase transition-colors"
             >
-              Visit Live Site →
+              Visit the3rdplaceapp.com
             </a>
           </AnimatedSection>
         </div>
@@ -51,14 +52,19 @@ export default function ThirdPlace() {
             <AnimatedSection>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#2D5A3D] mb-6">The Problem</h2>
               <p className="font-sans text-xl leading-relaxed font-light">
-                Standard mapping apps rely on star ratings, which fail to capture the nuance of a space. A 4.5 star rating doesn't tell you if a coffee shop has fast WiFi, comfortable seating, or the right ambient noise level for deep work.
+                Star ratings don't tell you whether a café is a good place to work or meet right now.
+                And café owners have no simple way to reach the people nearby who are looking for
+                exactly what they offer.
               </p>
             </AnimatedSection>
             
             <AnimatedSection delay={0.1}>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#2D5A3D] mb-6">The Solution</h2>
               <p className="font-sans text-xl leading-relaxed font-light">
-                We engineered a "Vibe DNA" system. A native mobile experience that categorizes spaces by mood, noise level, seating availability, and specific amenities tailored for the modern remote workforce.
+                Three connected products on one backend: a consumer mobile app for finding places to
+                work or meet, a Café OS dashboard for operators to run deals and check-ins, and a live
+                map of what's happening right now. The same pattern powers most consumer apps:
+                customer app, business dashboard and real-time location data.
               </p>
             </AnimatedSection>
           </div>
@@ -67,10 +73,10 @@ export default function ThirdPlace() {
             <h2 className="font-serif text-4xl mb-12">Core Architecture</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
-                { icon: Map, title: "Mapbox Integration", desc: "Custom-styled maps matching the app's organic aesthetic." },
-                { icon: Users, title: "Real-time Occupancy", desc: "Live crowd-sourced data on seat availability." },
-                { icon: Compass, title: "Vibe Matching AI", desc: "Recommendation engine based on past preferences." },
-                { icon: Zap, title: "Live Check-ins", desc: "Ephemeral social mechanics for serendipitous networking." }
+                { icon: Compass, title: "Consumer App", desc: "React Native app for finding cafés to work or meet in." },
+                { icon: Users, title: "Café OS", desc: "Next.js dashboard where operators run deals and check-ins." },
+                { icon: Map, title: "Live Map", desc: "Mapbox map showing what's happening right now." },
+                { icon: Zap, title: "One Backend", desc: "Supabase with PostGIS for real-time location data." }
               ].map((feature, i) => (
                 <div key={i} className="bg-white p-8 border border-[#E5E0D8] rounded-lg">
                   <feature.icon className="w-8 h-8 text-[#D9CDB8] mb-6" />

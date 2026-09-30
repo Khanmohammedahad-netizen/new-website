@@ -9,7 +9,7 @@ export default function LeadmineAi() {
     <div className="min-h-screen bg-[#050B14] text-white">
       <Seo
         title="LeadMine AI Case Study - AI Lead Intelligence Platform | MAK Software Solutions"
-        description="How MAK Software Solutions built LeadMine AI, an AI-driven lead intelligence platform routing across Groq, Gemini, and Ollama models for high-volume B2B lead scoring and enrichment."
+        description="How MAK Software Solutions built LeadMine AI, an AI-driven lead intelligence platform routing across Groq, Gemini, and Ollama models for cost-efficient B2B lead scoring and enrichment."
         path="/work/leadmine-ai"
         ogType="article"
         breadcrumbs={[
@@ -30,7 +30,7 @@ export default function LeadmineAi() {
             </div>
             <h1 className="font-serif text-6xl md:text-8xl mb-8">LeadMine AI</h1>
             <p className="font-sans text-xl text-zinc-400 max-w-2xl mx-auto font-light">
-              Dynamic LLM routing for high-volume data enrichment.
+              Routing each step to the right model, so lead scoring stays accurate and affordable.
             </p>
           </AnimatedSection>
         </div>
@@ -43,14 +43,15 @@ export default function LeadmineAi() {
             <AnimatedSection>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#4A90E2] mb-6">The Constraint</h2>
               <p className="font-sans text-xl leading-relaxed font-light text-zinc-300">
-                Processing tens of thousands of leads daily through top-tier LLMs like GPT-4 becomes cost-prohibitive immediately. Not every piece of data requires frontier-model reasoning.
+                Sending every lead through a top-tier model gets expensive fast as volume grows. Most
+                steps, like simple classification, don't need frontier-model reasoning at all.
               </p>
             </AnimatedSection>
             
             <AnimatedSection delay={0.1}>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#4A90E2] mb-6">The Solution</h2>
               <p className="font-sans text-xl leading-relaxed font-light text-zinc-300">
-                We built an intelligent routing layer. Simple classification tasks are sent to Groq (Llama 3) for microsecond responses. Complex extraction goes to Gemini. Sensitive on-premise tasks are routed to local Ollama instances.
+                We built an intelligent routing layer. Simple classification goes to fast, low-cost models on Groq. Complex extraction goes to Gemini. Sensitive data can stay on local Ollama models.
               </p>
             </AnimatedSection>
           </div>
@@ -61,7 +62,7 @@ export default function LeadmineAi() {
               {[
                 { icon: Zap, title: "Groq LPU", desc: "High-speed token generation for basic categorizations." },
                 { icon: Brain, title: "Google Gemini", desc: "Deep reasoning and unstructured data extraction." },
-                { icon: Database, title: "Local Ollama", desc: "Private, air-gapped processing for sensitive PII." }
+                { icon: Database, title: "Local Ollama", desc: "Local processing so sensitive data never leaves the machine." }
               ].map((model, i) => (
                 <div key={i} className="bg-[#0A1526] p-8 border border-[#1E3A5F] rounded-xl">
                   <model.icon className="w-8 h-8 text-[#4A90E2] mb-6" />

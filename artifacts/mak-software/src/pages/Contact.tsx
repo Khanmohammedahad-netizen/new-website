@@ -50,7 +50,7 @@ Message: ${values.message}`;
     <div className="min-h-screen bg-[#F5F0E8] pt-32 pb-24">
       <Seo
         title="Contact Us - Start a Project | MAK Software Solutions"
-        description="Start a software project with MAK Software Solutions. Get a technical proposal with architecture, timeline, and pricing. Reach us via WhatsApp or the contact form - we respond within 24 hours."
+        description="Start a software project with MAK Software Solutions. Get a written scope, timeline, and fixed milestones. Reach us via WhatsApp or the contact form. We respond within 24 hours."
         path="/contact"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -70,7 +70,7 @@ Message: ${values.message}`;
             name: 'MAK Software Solutions',
             url: 'https://www.maksoftwaresolutions.com/',
             telephone: '+91-7702448705',
-            email: 'hello@maksoftware.com',
+            email: 'ahad@maksoftwaresolutions.com',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Hyderabad',
@@ -79,7 +79,7 @@ Message: ${values.message}`;
             },
             areaServed: [
               'India', 'United Arab Emirates', 'Saudi Arabia',
-              'United Kingdom', 'United States', 'Singapore', 'Australia',
+              'United Kingdom', 'Australia',
             ],
             openingHours: 'Mo-Fr 09:00-18:00',
           },
@@ -157,10 +157,13 @@ Message: ${values.message}`;
                               {...field}
                             >
                               <option value="">Select a category</option>
-                              <option value="Enterprise Software">Enterprise Software</option>
-                              <option value="AI Integration">AI Integration</option>
+                              <option value="Website">Website</option>
+                              <option value="Mobile App">Mobile App</option>
+                              <option value="Enterprise Platform">Enterprise Platform</option>
+                              <option value="ERP / CRM">ERP / CRM</option>
+                              <option value="AI Solutions & Agents">AI Solutions & Agents</option>
                               <option value="SaaS Platform">SaaS Platform</option>
-                              <option value="Mobile Application">Mobile Application</option>
+                              <option value="Automation & Dashboards">Automation & Dashboards</option>
                               <option value="Other">Other</option>
                             </select>
                           </FormControl>
@@ -209,23 +212,19 @@ Message: ${values.message}`;
                 <div className="space-y-4 font-mono text-sm">
                   <div>
                     <span className="text-[#111411]/50 uppercase tracking-widest text-xs block mb-1">WhatsApp</span>
-                    <a href="https://wa.me/917702448705" target="_blank" rel="noreferrer" className="hover:text-[#2D5A3D] transition-colors">+91 7702448705</a>
+                    <a href="https://wa.me/917702448705" target="_blank" rel="noreferrer" className="hover:text-[#2D5A3D] transition-colors">+91 77024 48705</a>
                   </div>
                   <div>
                     <span className="text-[#111411]/50 uppercase tracking-widest text-xs block mb-1">Email</span>
-                    <a href="mailto:hello@maksoftware.com" className="hover:text-[#2D5A3D] transition-colors">hello@maksoftware.com</a>
+                    <a href="mailto:ahad@maksoftwaresolutions.com" className="hover:text-[#2D5A3D] transition-colors">ahad@maksoftwaresolutions.com</a>
                   </div>
                 </div>
               </div>
 
               <div className="pt-12 border-t border-[#E5E0D8]">
-                <h3 className="font-serif text-2xl mb-6">Global Presence</h3>
+                <h3 className="font-serif text-2xl mb-6">Where We Work</h3>
                 <ul className="grid grid-cols-2 gap-4 font-sans font-light text-[#111411]/80">
-                  <li>United States</li>
                   <li>United Kingdom</li>
-                  <li>Europe</li>
-                  <li>Japan</li>
-                  <li>Singapore</li>
                   <li>Australia</li>
                   <li>UAE</li>
                   <li>Saudi Arabia</li>

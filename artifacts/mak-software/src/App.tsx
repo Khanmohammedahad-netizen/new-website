@@ -21,6 +21,7 @@ import MakOs from '@/pages/work/MakOs';
 import SevenStarErp from '@/pages/work/SevenStarErp';
 import LeadmineAi from '@/pages/work/LeadmineAi';
 import SaasEcosystem from '@/pages/work/SaasEcosystem';
+import Aero from '@/pages/work/Aero';
 import Contact from '@/pages/Contact';
 
 // Components
@@ -70,6 +71,7 @@ function Router() {
           <Route path="/work/7star-erp" component={SevenStarErp} />
           <Route path="/work/leadmine-ai" component={LeadmineAi} />
           <Route path="/work/saas-ecosystem" component={SaasEcosystem} />
+          <Route path="/work/aero" component={Aero} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>

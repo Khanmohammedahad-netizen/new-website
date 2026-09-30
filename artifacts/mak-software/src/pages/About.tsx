@@ -27,7 +27,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Ship in weeks, iterate for years',
-    desc: 'First working release in weeks - then the system grows against real usage. Long planning phases are where projects go to die.',
+    desc: 'First working release in weeks. Then the system grows against real usage. Long planning phases are where projects go to die.',
   },
   {
     title: 'AI where it earns its place',
@@ -40,9 +40,8 @@ const PRINCIPLES = [
 ];
 
 const MILESTONES = [
-  { year: '2024', event: 'First platform builds: LeadMine AI lead intelligence and the shared SaaS ecosystem architecture.' },
-  { year: '2025', event: 'MAK Software Solutions founded in Hyderabad. MAK OS autonomous agent pipeline, 7STAR ERP, and Third Place ship the same year.' },
-  { year: '2026', event: 'Serving clients across India, the Gulf, and Europe with AI, ERP, and SaaS engineering.' },
+    { year: '2025', event: 'MAK Software Solutions founded in Hyderabad. MAK OS and 7STAR ERP ship, and Third Place goes into build.' },
+  { year: '2026', event: 'AERO Workforce Platform in active build for a UK aviation staffing agency at London Heathrow. Clients across India, the UAE, Saudi Arabia, the UK, and Australia.' },
 ];
 
 export default function About() {
@@ -50,7 +49,7 @@ export default function About() {
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
         title="About Us - Founder-Led Engineering Studio | MAK Software Solutions"
-        description="MAK Software Solutions is a founder-led software engineering studio in Hyderabad, India, building AI systems, ERP platforms, and SaaS products for clients across India, UAE, UK, and USA."
+        description="MAK Software Solutions is a founder-led software engineering studio in Hyderabad, India, building AI systems, ERP platforms, and SaaS products for clients across India, the UAE, Saudi Arabia, the UK, and Australia."
         path="/about"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -70,7 +69,7 @@ export default function About() {
             <p className="font-sans text-xl md:text-2xl max-w-3xl font-light text-zinc-300 leading-relaxed">
               MAK Software Solutions is a software engineering studio based in Hyderabad, India,
               building AI systems, enterprise platforms, and SaaS products for clients across
-              India, the Gulf, the UK, and beyond.
+              India, the UAE, Saudi Arabia, the UK, and Australia.
             </p>
           </AnimatedSection>
         </div>
@@ -92,11 +91,11 @@ export default function About() {
                 The studio is founder-led by <strong className="font-medium">Mohammed Ahad Khan</strong>,
                 who architects and builds alongside the team on every engagement. That means the
                 person who scopes your system is the person accountable for it running in
-                production - no telephone game between sales, management, and engineering.
+                production. No telephone game between sales, management, and engineering.
               </p>
               <p>
                 We are AI-first because we use this technology on ourselves. Our own operations run
-                on the agent systems we sell - <Link href="/work/mak-os" className="border-b border-[#111411]/40 hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">MAK OS</Link> handles
+                on the agent systems we sell. <Link href="/work/mak-os" className="border-b border-[#111411]/40 hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">MAK OS</Link> handles
                 our B2B pipeline autonomously. When we tell you what AI can and cannot do for your
                 business, it comes from operating it, not reading about it.
               </p>
@@ -150,7 +149,7 @@ export default function About() {
           <AnimatedSection>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">See the work, then decide.</h2>
             <p className="font-sans text-lg text-zinc-400 font-light mb-10 max-w-2xl mx-auto">
-              Five shipped platforms tell the story better than any about page.
+              Our case studies tell the story better than any about page.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link href="/work" className="bg-[#2D5A3D] hover:bg-[#2D5A3D]/80 text-white px-8 py-4 rounded-sm font-mono text-sm tracking-wider transition-colors">

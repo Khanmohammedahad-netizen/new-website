@@ -14,8 +14,7 @@ export default function Footer() {
               <Logo />
             </Link>
             <p className="text-muted-foreground max-w-sm font-sans text-sm leading-relaxed">
-              Elite global engineering firm building software that scales. 
-              We architect digital businesses, enterprise systems, and intelligent platforms.
+              Websites, mobile apps, business platforms and AI systems, built around how your business actually operates and engineered to keep running long after launch.
             </p>
           </div>
           
@@ -34,7 +33,8 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-sm tracking-wider uppercase mb-6">Work</h4>
             <ul className="flex flex-col gap-3 font-sans text-sm">
-              <li><Link href="/work/mak-os" className="text-muted-foreground hover:text-foreground transition-colors">MAK OS v1</Link></li>
+              <li><Link href="/work/mak-os" className="text-muted-foreground hover:text-foreground transition-colors">MAK OS</Link></li>
+              <li><Link href="/work/aero" className="text-muted-foreground hover:text-foreground transition-colors">AERO Workforce</Link></li>
               <li><Link href="/work/7star-erp" className="text-muted-foreground hover:text-foreground transition-colors">7STAR ERP</Link></li>
               <li><Link href="/work/third-place" className="text-muted-foreground hover:text-foreground transition-colors">Third Place</Link></li>
               <li><Link href="/work/leadmine-ai" className="text-muted-foreground hover:text-foreground transition-colors">LeadMine AI</Link></li>
@@ -74,7 +74,7 @@ export default function Footer() {
             &copy; {currentYear} MAK Software Solutions. All rights reserved.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground font-mono">
-            <span>Global Operations</span>
+            <span>Hyderabad, India</span>
             <span>Est. 2025</span>
           </div>
         </div>

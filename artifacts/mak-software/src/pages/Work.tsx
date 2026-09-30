@@ -6,21 +6,31 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const CASE_STUDIES = [
   {
+    id: "aero",
+    title: "AERO Workforce Platform",
+    category: "UK Aviation",
+    year: "In active build",
+    desc: "Recruitment, vetting, payroll and invoicing for aviation ground staff at London Heathrow.",
+    href: "/work/aero",
+    bg: "bg-[#0B1B2B]",
+    text: "text-white"
+  },
+  {
     id: "third-place",
     title: "Third Place",
     category: "Mobile App",
-    year: "2025",
-    desc: "Vibe-based discovery platform for coffee shops and workspaces.",
+    year: "2025-26",
+    desc: "Café-discovery platform for Hyderabad: consumer app, operator dashboard and live map.",
     href: "/work/third-place",
     bg: "bg-[#D9CDB8]",
     text: "text-[#111411]"
   },
   {
     id: "mak-os",
-    title: "MAK OS v1",
+    title: "MAK OS",
     category: "AI Agent Platform",
     year: "2025",
-    desc: "Autonomous multi-agent B2B acquisition pipeline.",
+    desc: "Autonomous client-acquisition system that finds, scores and contacts leads.",
     href: "/work/mak-os",
     bg: "bg-[#0A0A0A] border border-[#333]",
     text: "text-white"
@@ -28,9 +38,9 @@ const CASE_STUDIES = [
   {
     id: "7star-erp",
     title: "7STAR ERP",
-    category: "Enterprise Software",
+    category: "Enterprise · UAE & KSA",
     year: "2025",
-    desc: "Centralized resource planning for global operations.",
+    desc: "Calendar-driven operations platform for an events company, with UAE and Saudi VAT built in.",
     href: "/work/7star-erp",
     bg: "bg-[#2D5A3D]",
     text: "text-white"
@@ -50,11 +60,20 @@ const CASE_STUDIES = [
     title: "SaaS Ecosystem",
     category: "Infrastructure",
     year: "2024",
-    desc: "17-repository shared architecture for rapid SaaS deployment.",
+    desc: "Shared foundations for launching SaaS products faster.",
     href: "/work/saas-ecosystem",
     bg: "bg-[#F5F0E8] border border-[#E5E0D8]",
     text: "text-[#111411]"
   }
+];
+
+const WEBSITES = [
+  { name: "Pinnacle Eye Hospital", url: "pinnacleeyehospital.com", kind: "Live client site" },
+  { name: "Wool Cup Café", url: "woolcup.com", kind: "Live client site" },
+  { name: "Loka Artisan Coffee", url: "loka-artisan-coffee.vercel.app", kind: "Concept build" },
+  { name: "Tuffah", url: "tuffah.vercel.app", kind: "Concept build" },
+  { name: "Soo Coffee", url: "soo-coffee.vercel.app", kind: "Concept build" },
+  { name: "Lune", url: "lune-second-light.vercel.app", kind: "Concept build" },
 ];
 
 export default function Work() {
@@ -62,7 +81,7 @@ export default function Work() {
     <div className="pt-32 pb-32 min-h-screen bg-background">
       <Seo
         title="Case Studies & Portfolio | MAK Software Solutions"
-        description="Explore MAK Software Solutions case studies: AI agent platforms, enterprise ERP systems, mobile apps, and SaaS infrastructure built for clients across India, UAE, UK, and USA."
+        description="Explore MAK Software Solutions case studies: AI agent platforms, enterprise ERP systems, mobile apps, and SaaS infrastructure built for clients across India, UAE, Saudi Arabia, and the UK."
         path="/work"
         breadcrumbs={[
           { name: 'Home', path: '/' },
@@ -82,7 +101,7 @@ export default function Work() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {CASE_STUDIES.map((work, i) => (
-            <AnimatedSection key={work.id} delay={i * 0.1} className={i === 2 ? "md:col-span-2" : ""}>
+            <AnimatedSection key={work.id} delay={i * 0.1} className="">
               <Link href={work.href}>
                 <div className={`group relative p-8 md:p-12 rounded-xl flex flex-col justify-between h-[400px] md:h-[500px] overflow-hidden transition-transform duration-500 hover:-translate-y-2 ${work.bg} ${work.text}`}>
                   <div className="relative z-10 flex items-center justify-between">
@@ -104,6 +123,32 @@ export default function Work() {
                   </div>
                 </div>
               </Link>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        <AnimatedSection>
+          <div className="mt-32 mb-12 max-w-3xl">
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">Websites we've designed.</h2>
+            <p className="font-sans text-lg text-muted-foreground font-light">
+              Live client sites alongside concept builds, each designed from scratch around the brand.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {WEBSITES.map((site, i) => (
+            <AnimatedSection key={site.url} delay={i * 0.05}>
+              <a
+                href={`https://${site.url}`}
+                target="_blank"
+                rel="noreferrer"
+                className="group block p-8 rounded-xl border border-border hover:border-[#2D5A3D] transition-colors h-full"
+              >
+                <span className="font-mono text-[10px] tracking-widest uppercase text-[#2D5A3D]">{site.kind}</span>
+                <h3 className="font-serif text-2xl mt-3 mb-2">{site.name}</h3>
+                <span className="font-mono text-xs text-muted-foreground group-hover:text-foreground transition-colors">{site.url}</span>
+              </a>
             </AnimatedSection>
           ))}
         </div>

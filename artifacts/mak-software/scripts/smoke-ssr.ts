@@ -25,6 +25,7 @@ const ROUTES = [
   '/work/7star-erp',
   '/work/leadmine-ai',
   '/work/saas-ecosystem',
+  '/work/aero',
   '/contact',
 ];
 

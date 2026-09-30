@@ -19,19 +19,19 @@ const FAQS = [
   },
   {
     q: 'Which countries does MAK Software Solutions serve?',
-    a: 'We serve clients across India, the UAE, Saudi Arabia, the United Kingdom, the United States, Singapore, Japan, Australia, and Europe, with engineering operations based in Hyderabad, India.',
+    a: 'We work with clients across India, the UAE, Saudi Arabia, the United Kingdom, and Australia, with engineering based in Hyderabad, India.',
   },
   {
     q: 'How long does a typical software project take?',
-    a: 'Scope drives timelines, but most MVPs ship in 4–8 weeks and enterprise platforms in 8–16 weeks. We work in iterative sprints, so you see working software from the first weeks, not just at the end.',
+    a: 'Scope drives the timeline, and you get it in writing before we start. We work in iterative sprints with a demo at the end of each, so you see working software within the first weeks and always know what is done, what is next, and what it costs.',
   },
   {
-    q: 'Do you work with AI technologies like OpenAI, Claude, and Azure AI?',
-    a: 'Yes. AI integration is one of our core specialties - we build autonomous agent systems, LLM-powered workflows, and intelligent automation using OpenAI, Anthropic Claude, Google Gemini, Groq, and Azure AI services.',
+    q: 'Do you work with AI models like Claude, GPT, and Gemini?',
+    a: 'Yes. AI is one of our core specialties. We build multi-agent pipelines, LLM-powered workflows, and automation on Anthropic Claude, OpenAI GPT, and Google Gemini.',
   },
   {
     q: 'How do I start a project with MAK Software Solutions?',
-    a: 'Reach out through the contact form or WhatsApp. We start with a discovery call to map the problem space, then deliver a technical proposal with architecture, timeline, and pricing before any commitment.',
+    a: 'Reach out through the contact form or WhatsApp. We start with discovery to map your operation, then give you a written scope, timeline, and fixed milestones before any commitment.',
   },
 ];
 
@@ -42,8 +42,8 @@ const HOME_JSON_LD = [
     name: 'MAK Software Solutions',
     url: SITE_URL,
     description:
-      'AI-first software development company building enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile applications for clients across India, UAE, UK, USA, and beyond.',
-    areaServed: ['India', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'United States', 'Singapore', 'Japan', 'Australia'],
+      'AI-first software development company building enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile applications for clients across India, the UAE, Saudi Arabia, the UK, and Australia.',
+    areaServed: ['India', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'Australia'],
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Hyderabad',
@@ -149,7 +149,7 @@ export default function Home() {
     <div className="flex flex-col w-full bg-background min-h-screen">
       <Seo
         title="MAK Software Solutions | AI & Custom Software Development Company"
-        description="AI-first software development company in Hyderabad, India. We build enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile apps for clients across India, UAE, UK, USA, and beyond."
+        description="AI-first software development company in Hyderabad, India. We build enterprise software, AI agents, SaaS platforms, ERP/CRM systems, and mobile apps for clients across India, the UAE, Saudi Arabia, the UK, and Australia."
         path="/"
         jsonLd={HOME_JSON_LD}
       />
@@ -222,7 +222,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 font-sans text-lg md:text-xl leading-relaxed text-[#111411]/80 font-light">
               <p>
-                The gap between generic software vendors and elite engineering is measurable in scale, reliability, and business impact. Off-the-shelf products force you to adapt your operations. Inexperienced vendors build systems that collapse under load.
+                Off-the-shelf products force you to adapt your operation to the software. Template builds look fine at launch and struggle once the business grows. We start with how your business actually runs: the bookings, invoices, staff and customers.
               </p>
               <div className="flex flex-col gap-8">
                 <p ref={problemTextRef} className="flex flex-wrap gap-[0.25em]">
@@ -231,7 +231,7 @@ export default function Home() {
                   ))}
                 </p>
                 <p>
-                  We do not just take orders. We interrogate the problem space to ensure what we build is what your business actually needs to win.
+                  You work directly with the people designing and building your product. No layers of account managers, no hand-offs to a team you have never met.
                 </p>
               </div>
             </div>
@@ -258,9 +258,9 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { label: "Services", value: "14+" },
-              { label: "Global Markets", value: "9" },
-              { label: "Enterprise Platforms", value: "5+" },
+              { label: "Service Lines", value: "6" },
+              { label: "Core Markets", value: "5" },
+              { label: "Design to Deploy", value: "End-to-end" },
               { label: "Founded", value: "2025" }
             ].map((stat, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
@@ -360,26 +360,34 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12">
             {[
               {
+                title: "AERO Workforce Platform",
+                category: "UK Aviation",
+                year: "In active build",
+                desc: "Recruitment, vetting, payroll and invoicing for aviation ground staff at London Heathrow.",
+                href: "/work/aero",
+                bg: "bg-[#0B1B2B] text-white"
+              },
+              {
                 title: "Third Place",
-                category: "Mobile Application",
-                year: "2025",
-                desc: "Vibe-based discovery platform for coffee shops and workspaces.",
+                category: "Mobile App + Operator Platform",
+                year: "2025-26",
+                desc: "Café-discovery platform for Hyderabad: consumer app, operator dashboard and live map.",
                 href: "/work/third-place",
                 bg: "bg-[#D9CDB8]"
               },
               {
-                title: "MAK OS v1",
+                title: "MAK OS",
                 category: "AI Agent Platform",
                 year: "2025",
-                desc: "Autonomous multi-agent B2B acquisition pipeline.",
+                desc: "Autonomous client-acquisition system that finds, scores and contacts leads.",
                 href: "/work/mak-os",
                 bg: "bg-[#1A1A1A] text-white border border-[#333]"
               },
               {
                 title: "7STAR ERP",
-                category: "Enterprise Software",
+                category: "Enterprise · UAE & Saudi Arabia",
                 year: "2025",
-                desc: "Centralized resource planning for global operations.",
+                desc: "Calendar-driven operations platform for an events company, with UAE and Saudi VAT built in.",
                 href: "/work/7star-erp",
                 bg: "bg-[#2D5A3D] text-white"
               }
@@ -423,11 +431,11 @@ export default function Home() {
             
             <div className="pl-16 md:pl-32 relative">
               {[
-                { num: "01", title: "Discovery", desc: "We map the problem space before writing a line of code. Understanding business constraints, technical requirements, and long-term scale." },
-                { num: "02", title: "Architecture", desc: "System design and technical specification built for your scale. Database schemas, API structures, and infrastructure planning." },
-                { num: "03", title: "Engineering", desc: "Precise, tested, documented code shipped in iterative sprints. Complete transparency into the development process." },
-                { num: "04", title: "Launch", desc: "Deployment, monitoring, and handover to your team. Ensuring zero downtime and absolute stability." },
-                { num: "05", title: "Evolution", desc: "Ongoing partnership as your business scales. System upgrades, new features, and technical advisory." }
+                { num: "01", title: "Discovery", desc: "We map the operation, the constraints, and what 'done' must mean before any architecture is proposed. Output: a written scope, timeline, and fixed milestones." },
+                { num: "02", title: "Architecture", desc: "Clickable designs for your sign-off, alongside database, API, and infrastructure planning sized for today and the year ahead." },
+                { num: "03", title: "Engineering", desc: "Iterative sprints with a demo at the end of each. You review real, working versions throughout, not just at the end." },
+                { num: "04", title: "Launch", desc: "Website go-live or App Store and Google Play submission, production deployment, monitoring, and training for your team." },
+                { num: "05", title: "Evolution", desc: "Ongoing support, upgrades, and new features as the business changes shape, under a clear maintenance agreement." }
               ].map((step, i) => (
                 <AnimatedSection key={i} className="mb-20 last:mb-0 relative">
                   <div className="absolute -left-[41px] md:-left-[73px] top-1 w-5 h-5 bg-[#0A0A0A] border-2 border-[#2D5A3D] rounded-full z-10" />
@@ -441,25 +449,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. STATISTICS */}
-      <section className="py-24 bg-[#F5F0E8] border-y border-[#E5E0D8]">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            {[
-              { label: "Services", value: "14+" },
-              { label: "Global Markets", value: "9" },
-              { label: "Enterprise Systems", value: "5+" },
-              { label: "Years Experience", value: "2+" }
-            ].map((stat, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="font-serif text-5xl md:text-6xl text-[#1A3D2B] mb-2">{stat.value}</div>
-                <div className="font-mono text-xs uppercase tracking-widest text-[#111411]/60">{stat.label}</div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 9. GLOBAL PRESENCE */}
       <section className="py-32 bg-[#0A0A0A] text-white">
         <div className="container mx-auto px-6">
@@ -467,15 +456,14 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="font-serif text-4xl md:text-5xl mb-6">Built for the world.</h2>
               <p className="font-sans text-xl text-zinc-400 font-light max-w-2xl mx-auto">
-                Our infrastructure powers businesses across multiple continents, built to handle regional compliance, multi-currency operations, and global scale.
+                Based in Hyderabad, working with clients in India, the Gulf, the UK, and Australia. Our systems handle regional requirements like UAE and Saudi VAT and UK workforce compliance.
               </p>
             </div>
           </AnimatedSection>
 
           <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
             {[
-              "United States", "United Kingdom", "Europe", "Japan", 
-              "Singapore", "Australia", "UAE", "Saudi Arabia", "India"
+              "India", "UAE", "Saudi Arabia", "United Kingdom", "Australia"
             ].map((country, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
                 <div className="bg-[#111411] border border-white/10 px-6 py-3 rounded-full flex items-center gap-3 hover:border-[#2D5A3D] transition-colors cursor-default">
@@ -519,7 +507,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="font-serif text-4xl md:text-6xl mb-6">Ready to build something exceptional?</h2>
               <p className="font-sans text-lg text-[#111411]/80 mb-12 max-w-2xl mx-auto font-light">
-                Explore our <Link href="/work" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">portfolio of successful projects</Link> or <Link href="/contact" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">start your project today</Link>.
+                Explore our <Link href="/work" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">case studies</Link> or <Link href="/contact" className="border-b border-[#111411] hover:text-[#2D5A3D] hover:border-[#2D5A3D] transition-colors">start your project today</Link>.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Link
@@ -549,10 +537,10 @@ export default function Home() {
               <h2 className="font-mono text-xs tracking-widest uppercase text-zinc-500 mb-12">A note from our founder</h2>
               
               <p className="font-serif text-2xl md:text-4xl leading-[1.4] font-light mb-12">
-                "Every system we build starts with a question: what does the business actually need? Not what the user asked for. Not what's popular. What the business needs to grow, to scale, to win. That discipline is what separates engineering from software development. It's why our clients stay."
+                "Every system we build starts with one question: what does this business need to grow, to scale, to win? We take the time to understand the operation first, and then engineer software that serves it for years, not months. That discipline is why our clients stay."
               </p>
               
-              <div className="font-sans font-medium">The MAK Software Team</div>
+              <div className="font-sans font-medium">Mohammed Ahad Khan, Founder</div>
             </div>
           </AnimatedSection>
         </div>

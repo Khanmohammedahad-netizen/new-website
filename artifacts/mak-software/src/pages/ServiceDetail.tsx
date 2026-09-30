@@ -19,7 +19,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
       description: service.metaDescription,
       url: `${SITE_URL}${path}`,
       provider: { '@id': `${SITE_URL}/#organization` },
-      areaServed: ['India', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'United States', 'Singapore', 'Japan', 'Australia'],
+      areaServed: ['India', 'United Arab Emirates', 'Saudi Arabia', 'United Kingdom', 'Australia'],
     },
     {
       '@context': 'https://schema.org',

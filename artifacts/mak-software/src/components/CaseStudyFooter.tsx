@@ -5,6 +5,7 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const ORDER = [
   { slug: 'third-place', title: 'Third Place', href: '/work/third-place' },
+  { slug: 'aero', title: 'AERO', href: '/work/aero' },
   { slug: 'mak-os', title: 'MAK OS', href: '/work/mak-os' },
   { slug: '7star-erp', title: '7STAR ERP', href: '/work/7star-erp' },
   { slug: 'leadmine-ai', title: 'LeadMine AI', href: '/work/leadmine-ai' },

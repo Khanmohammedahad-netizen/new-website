@@ -9,7 +9,7 @@ export default function SaasEcosystem() {
     <div className="min-h-screen bg-[#F5F0E8] text-[#111411]">
       <Seo
         title="SaaS Ecosystem Case Study - Shared Platform Architecture | MAK Software Solutions"
-        description="How MAK Software Solutions built a 17-repository shared SaaS architecture enabling rapid deployment of new products with common auth, billing, and infrastructure layers."
+        description="How MAK Software Solutions built a shared SaaS architecture so new products start with auth, billing, tenancy and deployment already in place."
         path="/work/saas-ecosystem"
         ogType="article"
         breadcrumbs={[
@@ -33,7 +33,7 @@ export default function SaasEcosystem() {
             </div>
             <h1 className="font-serif text-6xl md:text-8xl mb-8 max-w-4xl">Shared SaaS Architecture.</h1>
             <p className="font-sans text-xl font-light opacity-80 max-w-2xl">
-              A 17-repository ecosystem allowing us to deploy robust B2B SaaS platforms in days instead of months.
+              Shared foundations that let new SaaS products start from proven auth, billing and deployment instead of a blank project.
             </p>
           </AnimatedSection>
         </div>
@@ -53,7 +53,7 @@ export default function SaasEcosystem() {
             <AnimatedSection delay={0.1}>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#2D5A3D] mb-6">The Solution</h2>
               <p className="font-sans text-xl leading-relaxed font-light">
-                We engineered a proprietary monorepo-inspired ecosystem comprising 17 foundational packages. It handles Stripe integration, Supabase auth, RBAC, and UI components out of the box.
+                We built a set of shared foundation packages covering Supabase auth, roles and permissions, billing, and UI components, so each new product starts with them already working.
               </p>
             </AnimatedSection>
           </div>
@@ -62,10 +62,10 @@ export default function SaasEcosystem() {
             <h2 className="font-serif text-4xl mb-12">Core Foundations</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
-                { icon: Shield, title: "Auth & Tenancy", desc: "Enterprise-grade RBAC and multi-tenant data isolation." },
+                { icon: Shield, title: "Auth & Tenancy", desc: "Role-based access and multi-tenant data isolation." },
                 { icon: Layers, title: "Design System", desc: "Strict, accessible React components shared across all apps." },
-                { icon: FileCode2, title: "API Gateway", desc: "Standardized tRPC and REST patterns with rate limiting." },
-                { icon: Repeat, title: "CI/CD Pipelines", desc: "Zero-downtime deployment workflows on Vercel and AWS." }
+                { icon: FileCode2, title: "Shared API Patterns", desc: "Standard API patterns shared across every product." },
+                { icon: Repeat, title: "CI/CD Pipelines", desc: "Automated deployment workflows on Vercel." }
               ].map((feature, i) => (
                 <div key={i} className="flex gap-6 items-start">
                   <div className="w-12 h-12 bg-white border border-[#E5E0D8] rounded-full flex items-center justify-center shrink-0">

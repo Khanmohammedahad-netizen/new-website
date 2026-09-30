@@ -9,7 +9,7 @@ export default function SevenStarErp() {
     <div className="min-h-screen bg-[#F8F9FA] text-[#0F172A]">
       <Seo
         title="7STAR ERP Case Study - Enterprise Resource Planning | MAK Software Solutions"
-        description="How MAK Software Solutions built 7STAR ERP, a centralized enterprise resource planning system managing global operations, inventory, finance, and workforce for an international business."
+        description="How MAK Software Solutions built 7STAR ERP, a calendar-driven ERP for an event management company in the UAE and Saudi Arabia: scheduling, quotations, invoices with PDF export, UAE and KSA VAT, and visa-expiry alerts."
         path="/work/7star-erp"
         ogType="article"
         breadcrumbs={[
@@ -29,7 +29,7 @@ export default function SevenStarErp() {
               <span className="font-mono text-xs tracking-widest uppercase">Enterprise Software</span>
             </div>
             <h1 className="font-serif text-5xl md:text-7xl mb-8 max-w-4xl leading-tight">
-              Centralizing global operations for 7STAR.
+              One platform for 7STAR's operations across the UAE and Saudi Arabia.
             </h1>
           </AnimatedSection>
         </div>
@@ -42,14 +42,18 @@ export default function SevenStarErp() {
             <AnimatedSection>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#0F172A]/50 mb-6">The Challenge</h2>
               <p className="font-sans text-xl leading-relaxed font-light text-[#0F172A]/80">
-                Operating across multiple continents with disconnected legacy systems resulted in severe data fragmentation. Inventory visibility was delayed by days, and financial reconciliation required hundreds of manual hours per month.
+                An event management company operating across the UAE and Saudi Arabia ran its
+                operations across spreadsheets and message threads. Invoices, VAT and staff visas
+                were all tracked by hand.
               </p>
             </AnimatedSection>
             
             <AnimatedSection delay={0.1}>
               <h2 className="font-mono text-xs tracking-widest uppercase text-[#0F172A]/50 mb-6">The Solution</h2>
               <p className="font-sans text-xl leading-relaxed font-light text-[#0F172A]/80">
-                A custom-engineered Enterprise Resource Planning (ERP) platform. Built from the ground up for their specific workflows, integrating supply chain, finance, HR, and global logistics into a single source of truth.
+                One calendar-driven platform: event scheduling, quotations and invoices with
+                automatic PDF export, UAE and Saudi VAT calculated in-system, and visa-expiry alerts
+                so nothing lapses.
               </p>
             </AnimatedSection>
           </div>
@@ -58,10 +62,10 @@ export default function SevenStarErp() {
             <h2 className="font-serif text-4xl mb-12">System Capabilities</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#E2E8F0] border border-[#E2E8F0] rounded-xl overflow-hidden">
               {[
-                { icon: Globe2, title: "Multi-Currency Financials", desc: "Automated reconciliation across 9 regional currencies." },
-                { icon: Building2, title: "Global Inventory Management", desc: "Real-time stock visibility across 40+ warehouses." },
-                { icon: BarChart3, title: "Predictive Analytics", desc: "Machine learning models for demand forecasting." },
-                { icon: ShieldCheck, title: "Role-Based Access Control", desc: "Granular permissions for 2000+ internal users." }
+                { icon: Building2, title: "Calendar-Driven Scheduling", desc: "Every event planned and tracked from one shared calendar." },
+                { icon: BarChart3, title: "Quotations & Invoices", desc: "Quotes and invoices generated in-system with automatic PDF export." },
+                { icon: Globe2, title: "UAE + KSA VAT", desc: "UAE and Saudi VAT calculated automatically on every document." },
+                { icon: ShieldCheck, title: "Visa-Expiry Alerts", desc: "Staff visa dates tracked with alerts before anything lapses." }
               ].map((feature, i) => (
                 <div key={i} className="bg-white p-10 hover:bg-[#F8F9FA] transition-colors">
                   <div className="w-12 h-12 bg-[#0F172A] rounded-lg flex items-center justify-center mb-6">
