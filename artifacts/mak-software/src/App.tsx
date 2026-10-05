@@ -27,6 +27,7 @@ import Contact from '@/pages/Contact';
 // Components
 import Navbar from '@/components/nav/Navbar';
 import Footer from '@/components/nav/Footer';
+import Analytics from '@/components/Analytics';
 
 const queryClient = new QueryClient();
 
@@ -77,6 +78,7 @@ function Router() {
         </Switch>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
